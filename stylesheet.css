@@ -1,0 +1,7 @@
+.image-card .card-body {
+    display: none; /* Ocultar el cuerpo de la tarjeta por defecto */
+ }
+
+.image-card.show-body .card-body {
+    display: block; /* Mostrar el cuerpo de la tarjeta cuando se active */
+ }

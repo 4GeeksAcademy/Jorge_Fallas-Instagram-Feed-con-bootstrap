@@ -1,7 +1,9 @@
-.image-card .card-body {
-    display: none; /* Ocultar el cuerpo de la tarjeta por defecto */
- }
+.custom-div {
+  max-width: 40rem;
+  margin: 0 auto;
+}
 
-.image-card.show-body .card-body {
-    display: block; /* Mostrar el cuerpo de la tarjeta cuando se active */
- }
+.custome-settings{
+  margin-right: 10px;
+  margin-bottom: 15px;
+}

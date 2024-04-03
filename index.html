@@ -19,40 +19,44 @@
             <i class="fa-brands fa-instagram"></i>
             <strong>Instagram</strong>
           </a>
-            <ul class="navbar-nav navbar-expand-lg">
-                <!-- Agregamos Modal button -->
-                <li>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Create a new post
-                    </button>
-                    <!-- Agregamos el cuerpo del Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel"><strong>Create a post</strong></h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="message-text" class="col-form-label"><strong>Caption:</strong></label>
-                                        <textarea class="form-control" id="message-text">Add the caption here...</textarea>
-                                        <div class="btn-group gap-2 mt-2" role="group">
-                                            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-camera"></i></button>
-                                            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-location-dot"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success">Publish</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                             <!-- Agregamos Modal button -->
+                             <li>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                  Create a new post
+                              </button>
+                              <!-- Agregamos el cuerpo del Modal -->
+                              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5 class="modal-title" id="staticBackdropLabel"><strong>Create a post</strong></h5>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="mb-3">
+                                                  <label for="message-text" class="col-form-label"><strong>Caption:</strong></label>
+                                                  <textarea class="form-control" id="message-text">Add the caption here...</textarea>
+                                                  <div class="btn-group gap-2 mt-2" role="group">
+                                                      <button type="button" class="btn btn-secondary"><i class="fa-solid fa-camera"></i></button>
+                                                      <button type="button" class="btn btn-secondary"><i class="fa-solid fa-location-dot"></i></button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                              <button type="button" class="btn btn-success">Publish</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
                 <!-- Agregamos el dropdown menu -->
-                <li class="nav-item dropdown ">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -63,124 +67,128 @@
                       </ul>
                 </li>
             </ul>
+          </div>
         </div>
     </nav>
     <body>
         <body>
-            <div class="container text-center ">
+            <div class="container">
                 <!-- Agregamos botones para cambiar entre una vista y la otra -->
-              <button id="toRowsButton" class="btn btn-primary mt-3 mb-3">Filas</button>
-              <button id="toColumnsButton" class="btn btn-primary mt-3 mb-3">Columnas</button>
-              <!-- Agregamos cuanta linea y columnas queremos -->
-              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center align-items-center">
+                <ul class="nav nav-pills mb-3 mt-3 justify-content-center" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-columna-tab" data-bs-toggle="pill" data-bs-target="#pills-columna"
+                          type="button" role="tab" aria-controls="pills-columna" aria-selected="true">
+                          <i class="fa-solid fa-square"></i>
+                      </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-cuadricula-tab" data-bs-toggle="pill" data-bs-target="#pills-cuadricula"
+                          type="button" role="tab" aria-controls="pills-cuadricula" aria-selected="false">
+                          <i class="fa-solid fa-table-cells"></i>
+                      </button>
+                  </li>
+              </ul>
                 <!-- Agregamos la opcion de card -->
-                <div class="col image-card">
-                  <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top">
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>2406 Likes</strong></h5>
-                      <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis doloribus, accusantium provident sequi ab accusamus repellat, pariatur reprehenderit recusandae totam sunt velit quo nostrum, aperiam minima excepturi saepe magni voluptates.</p>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-columna" role="tabpanel" aria-labelledby="pills-columna-tab"
+                      tabindex="0">
+                      <div class="card border-black mb-3 custom-div">
+                          <div class="row card-header bg-transparent border-black m-0">
+                              <div class="col-10">Imagen Random</div>
+                              <div class="col-2 headSpace">08/21</div>
+                          </div>
+                          <div class="card-body p-0">
+                              <img src="https://picsum.photos/200" class="card-img-top fitCoverSingle">
+                          </div>
+                          <div class="card-footer bg-transparent border-black">
+                              <h5 class="card-title">1250 Likes</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                  card's content.</p>
+                          </div>
+                      </div>
+                      <!-- Resto del contenido de tarjetas similar -->
+                      <div class="card border-black mb-3 custom-div">
+                        <div class="row card-header bg-transparent border-black m-0">
+                            <div class="col-10">Imagen Random</div>
+                            <div class="col-2 headSpace">02/10</div>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="https://picsum.photos/200" class="card-img-top fitCoverSingle">
+                        </div>
+                        <div class="card-footer bg-transparent border-black">
+                            <h5 class="card-title">666 Likes</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p>
+                        </div>
                     </div>
+                    <div class="card border-black mb-3 custom-div">
+                      <div class="row card-header bg-transparent border-black m-0">
+                          <div class="col-10">Imagen Random</div>
+                          <div class="col-2 headSpace">05/15</div>
+                      </div>
+                      <div class="card-body p-0">
+                          <img src="https://picsum.photos/200" class="card-img-top fitCoverSingle">
+                      </div>
+                      <div class="card-footer bg-transparent border-black">
+                          <h5 class="card-title">333 Likes</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                              card's content.</p>
+                      </div>
                   </div>
+                  <div class="card border-black mb-3 custom-div">
+                    <div class="row card-header bg-transparent border-black m-0">
+                        <div class="col-10">Imagen Random</div>
+                        <div class="col-2 headSpace">10/21</div>
+                    </div>
+                    <div class="card-body p-0">
+                        <img src="https://picsum.photos/200" class="card-img-top fitCoverSingle">
+                    </div>
+                    <div class="card-footer bg-transparent border-black">
+                        <h5 class="card-title">698 Likes</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
                 </div>
-                <div class="col image-card">
-                  <div class="card">
-                    <img src="https://picsum.photos/200" class="card-img-top">
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>206 Likes</strong></h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                    </div>
                   </div>
+                  <!-- Código para la otra pestaña -->
+                  <div class="tab-pane fade" id="pills-cuadricula" role="tabpanel" aria-labelledby="pills-cuadricula-tab"
+            tabindex="0">
+            <div class="row">
+                <div class="card-group">
+                    <div class="card custome-settings">
+                        <img src="https://picsum.photos/200" class="card-img-top object-fit-cover custome-settings">
+                    </div>
+                    <div class="card custome-settings">
+                      <img src="https://picsum.photos/200" class="card-img-top object-fit-cover custome-settings">
+                  </div>
+                  <div class="card custome-settings">
+                    <img src="https://picsum.photos/200" class="card-img-top object-fit-cover">
                 </div>
-                <div class="col image-card">
-                    <div class="card">
-                      <img src="https://picsum.photos/200" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>206 Likes</strong></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col image-card">
-                    <div class="card">
-                      <img src="https://picsum.photos/200" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>206 Likes</strong></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col image-card">
-                    <div class="card">
-                      <img src="https://picsum.photos/200" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>206 Likes</strong></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col image-card">
-                    <div class="card">
-                      <img src="https://picsum.photos/200" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>206 Likes</strong></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col image-card">
-                    <div class="card">
-                      <img src="https://picsum.photos/200" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>206 Likes</strong></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col image-card">
-                    <div class="card">
-                      <img src="https://picsum.photos/200" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>206 Likes</strong></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col image-card">
-                    <div class="card">
-                      <img src="https://picsum.photos/200" class="card-img-top">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>206 Likes</strong></h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore saepe ullam distinctio fuga placeat, laudantium tempora eius, neque quaerat officiis iste obcaecati modi quas, est fugiat! Officiis tempore maxime voluptatibus?</p>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+              <div class="card-group mt-3">
+                <div class="card custome-settings">
+                    <img src="https://picsum.photos/200" class="card-img-top object-fit-cover custome-settings">
+                </div>
+                <div class="card custome-settings">
+                  <img src="https://picsum.photos/200" class="card-img-top object-fit-cover custome-settings">
+              </div>
+              <div class="card custome-settings">
+                <img src="https://picsum.photos/200" class="card-img-top object-fit-cover">
+            </div>
+          </div>
+          <div class="card-group mt-3">
+            <div class="card custome-settings">
+                <img src="https://picsum.photos/200" class="card-img-top object-fit-cover custome-settings">
+            </div>
+            <div class="card custome-settings">
+              <img src="https://picsum.photos/200" class="card-img-top object-fit-cover">
+          </div>
+          <div class="card custome-settings">
+            <img src="https://picsum.photos/200" class="card-img-top object-fit-cover custome-settings">
+        </div>
+      </div>
                   
               </div>
-            </div>
-          
-            <script>
-              const toRowsButton = document.getElementById('toRowsButton');
-              const toColumnsButton = document.getElementById('toColumnsButton');
-              const row = document.querySelector('.row');
-          
-              toRowsButton.addEventListener('click', function() {
-                row.classList.remove('flex-column');
-                row.classList.add('flex-row');
-                document.querySelectorAll('.image-card').forEach(card => {
-                  card.classList.remove('col-md-6', 'col-lg-4');
-                  card.classList.remove('show-body'); // Ocultar el cuerpo de la tarjeta al cambiar a filas
-                });
-              });
-          
-              toColumnsButton.addEventListener('click', function() {
-                row.classList.remove('flex-row');
-                row.classList.add('flex-column');
-                document.querySelectorAll('.image-card').forEach(card => {
-                  card.classList.add('col-md-6', 'col-lg-4', 'mb-3');
-                  card.classList.add('show-body'); // Mostrar el cuerpo de la tarjeta al cambiar a columnas
-                });
-              });
-            </script>
+    </div>
     </body>
 </html>
